@@ -25,13 +25,9 @@ class Ball{
         this.x += this.dx;
         this.y += this.dy;
 
-        // this.x += this.xOff;
-        // this.y += this.yOff;
     }
 
     show(){
-        //noStroke();
-        //fill(this.radius % 256, 255 - (this.xOff*width), 255 - (this.yOff * height));
         ellipse(this.x, this.y, this.radius, this.radius);
     }
 
