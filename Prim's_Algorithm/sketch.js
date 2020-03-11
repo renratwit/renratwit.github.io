@@ -34,6 +34,7 @@ function MST(){
 
     let reached = [];
     let unreached = [];
+    
     //all vertices are unreached
     unreached = [...vertices];
 
