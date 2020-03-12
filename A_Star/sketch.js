@@ -1,5 +1,5 @@
 //dimension of entire grid in pixels
-let dimensions = 800;
+let dimensions = 500;
 
 //number of rows and columns.
 //rows and cols will most likely always be equal...
@@ -15,7 +15,6 @@ let start, end;
 
 let path;
 
-let startButton;
 let begin = false;
 
 let cameFrom = new Map();
@@ -25,13 +24,6 @@ let w, h;
 function setup() {
     createCanvas(dimensions, dimensions);
     background(0);
-
-    startButton = createButton('GO');
-    startButton.position(dimensions + 20, 50);
-    startButton.mousePressed(() => {
-        begin = true;
-        console.log("Starting Search...");
-    });
 
     //create 2D array
     for (var i = 0; i < cols; i++)
@@ -136,12 +128,13 @@ function draw() {
                 path.push(temp.cameFrom);
                 temp = temp.cameFrom;
             }
+            //show the path
             for(var i = 0; i < path.length; i++){
                 var x = path[i].i;
                 var y = path[i].j;
                 fill(0, 0, 200);
                 stroke(0);
-                ellipse(x * w + w/2, y * h + h/2, dimensions/rows, dimensions/rows);
+                rect(x * w, y * h, dimensions/rows, dimensions/rows);
             }
             noLoop();
             return;

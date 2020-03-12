@@ -11,7 +11,7 @@ class Cell{
 
         this.neighbors = [];
         this.isBlock = false;
-        this.isBlock = random(1) < 0.20?true:false;
+        this.isBlock = random(1) < 0.22 ? true:false;
 
         this.length = grid.length;
         this.d = dimension;
