@@ -1,0 +1,21 @@
+.p5Canvas {
+    background-color: blueviolet;
+    border: blueviolet solid 5px;;
+    flex: 1;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    padding: 5px;
+    border: black solid;
+    width: 50vw;
+}
+
+
+#information {
+    border: blue solid;
+    flex: 1;
+}
+

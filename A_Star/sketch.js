@@ -22,8 +22,9 @@ let cameFrom = new Map();
 let w, h;
 
 function setup() {
-    createCanvas(dimensions, dimensions);
+    var canvas = createCanvas(dimensions, dimensions);
     background(0);
+    canvas.parent('main-container');
 
     //create 2D array
     for (var i = 0; i < cols; i++)
@@ -132,9 +133,10 @@ function draw() {
             for(var i = 0; i < path.length; i++){
                 var x = path[i].i;
                 var y = path[i].j;
-                fill(0, 0, 200);
+                fill('rgba(0, 0, 200, 0.6)');
                 stroke(0);
                 rect(x * w, y * h, dimensions/rows, dimensions/rows);
+                document.getElementById("path").innerHTML = path.length;
             }
             noLoop();
             return;
