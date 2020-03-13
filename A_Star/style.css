@@ -2,6 +2,9 @@
     background-color: blueviolet;
     border: blueviolet solid 5px;;
     flex: 1;
+    float: left;
+    width: 60% !important;
+    height: 60% !important;
 }
 
 #main-container {
@@ -17,5 +20,6 @@
 #information {
     border: blue solid;
     flex: 1;
+    flex-shrink: 4;
 }
 
