@@ -21,7 +21,6 @@ class Cell{
     }
 
     show(r, g, b){
-        
         fill(r, g, b);
         stroke(0);
         rect(this.i * this.size, this.j * this.size, this.size - 0.5, this.size - 0.5);
@@ -30,18 +29,31 @@ class Cell{
     populateNeighbors(grid){
         var i = this.i;
         var j = this.j;
-
-        if(i < cols - 1 && !grid[i+1][j].isBlock)
+       
+        if (i < cols - 1 && !grid[i + 1][j].isBlock) {
             this.neighbors.push(grid[i + 1][j]);
-
-        if(j < rows - 1 && !grid[i][j+1].isBlock)
-            this.neighbors.push(grid[i]    [j + 1]);
-
-        if(i > 0 && !grid[i - 1][j].isBlock)
+          }
+        if (i > 0 && !grid[i - 1][j].isBlock) {
             this.neighbors.push(grid[i - 1][j]);
-            
-        if(j > 0 && !grid[i][j-1].isBlock)
-            this.neighbors.push(grid[i]    [j - 1]);
+          }
+         if (j < rows - 1 && !grid[i][j + 1].isBlock) {
+            this.neighbors.push(grid[i][j + 1]);
+          }
+        if (j > 0 && !grid[i][j - 1].isBlock) {
+            this.neighbors.push(grid[i][j - 1]);
+          }
+        if (i > 0 && j > 0 && !grid[i - 1][j - 1].isBlock) {
+            this.neighbors.push(grid[i - 1][j - 1]);
+          }
+        if (i < cols - 1 && j > 0 && !grid[i + 1][j - 1].isBlock) {
+            this.neighbors.push(grid[i + 1][j - 1]);
+          }
+        if (i > 0 && j < rows - 1 && !grid[i - 1][j + 1].isBlock) {
+            this.neighbors.push(grid[i - 1][j + 1]);
+          }
+        if (i < cols - 1 && j < rows - 1 && !grid[i + 1][j + 1].isBlock) {
+            this.neighbors.push(grid[i + 1][j + 1]);
+          }
     }
-
 }
+

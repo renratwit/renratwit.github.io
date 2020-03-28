@@ -1,5 +1,5 @@
 //dimension of entire grid in pixels
-let dimensions = 500;
+let dimensions = 800;
 
 //number of rows and columns.
 //rows and cols will most likely always be equal...
@@ -25,6 +25,7 @@ function setup() {
     var canvas = createCanvas(dimensions, dimensions);
     background(0);
     canvas.parent('main-container');
+    pixelDensity(1);
 
     //create 2D array
     for (var i = 0; i < cols; i++)
@@ -104,72 +105,79 @@ function reconstructPath(cameFrom, current) {
 /***************************************************************/
 
 function draw() {
+    // Am I still searching?
+  if (openSet.length > 0) {
 
-    console.log("HERE");
-    //start A*
-    if (openSet.length > 0) {
+    // Best next option
+    var winner = 0;
+    for (var i = 0; i < openSet.length; i++) {
+      if (openSet[i].f < openSet[winner].f) {
+        winner = i;
+      }
+    }
+    var current = openSet[winner];
 
-        //current = node with lowest f
-        var lowestIndex = 0;
-        for (var i = 0; i < openSet.length; i++) {
-            if (openSet[i].f < openSet[lowestIndex])
-                lowestIndex = i;
-        }
-
-        let current = openSet[lowestIndex];
-
-        //if the end is found
-        if (openSet[lowestIndex] === end) {
-            console.log("End Found");
-            //draw the path
-            var temp = current;
+    // Did I finish?
+    if (current === end) {
+        console.log("End Found");
+        var temp = current;
             path = [];
             path.push(temp);
             while(temp.cameFrom){
                 path.push(temp.cameFrom);
                 temp = temp.cameFrom;
             }
-            //show the path
-            for(var i = 0; i < path.length; i++){
-                var x = path[i].i;
-                var y = path[i].j;
-                fill('rgba(0, 0, 200, 0.6)');
+        for(var i = 0; i < path.length; i++){
+            var x = path[i].i;
+            var y = path[i].j;
+                fill('rgba(0, 0, 200, 1)');
                 stroke(0);
                 rect(x * w, y * h, dimensions/rows, dimensions/rows);
-                document.getElementById("path").innerHTML = path.length;
-            }
-            noLoop();
-            return;
+        }
+      noLoop();
+    }
+
+    // Best option moves from openSet to closedSet
+    removeFromArray(openSet, current);
+    closedSet.push(current);
+
+    // Check all the neighbors
+    var neighbors = current.neighbors;
+    for (var i = 0; i < neighbors.length; i++) {
+      var neighbor = neighbors[i];
+
+      // Valid next spot?
+      if (!closedSet.includes(neighbor) && !neighbor.wall) {
+        var tempG = current.g + heuristic(neighbor, current);
+
+        // Is this a better path than before?
+        var newPath = false;
+        if (openSet.includes(neighbor)) {
+          if (tempG < neighbor.g) {
+            neighbor.g = tempG;
+            newPath = true;
+          }
+        } else {
+          neighbor.g = tempG;
+          newPath = true;
+          openSet.push(neighbor);
         }
 
-        closedSet.push(current);
+        // Yes, it's a better path
+        if (newPath) {
+          neighbor.h = heuristic(neighbor, end);
+          neighbor.f = neighbor.g + neighbor.h;
+          neighbor.previous = current;
+        }
+      }
 
-        //openSet.remove(current)
-        removeFromArray(openSet, current);
-
-        //for each neighbor of current
-        var neighbors = current.neighbors;
-        for (var i = 0; i < neighbors.length; i++) {
-            var n = neighbors[i];
-            if (!closedSet.includes(n)) {
-                var tentG = current.g + 1;
-                if (openSet.includes(n)) {
-                    if (tentG < n.g){
-                        n.g = tentG;
-                    }    
-                } else {
-                    n.g = tentG;
-                    openSet.push(n);
-                }
-                n.cameFrom = current;
-                n.h = heuristic(n, end);
-                n.f = n.g + n.h;
-            }
-        }//end for-loop
-    } else { //ends algorithm
-        console.log("No Path");
-        noLoop();
     }
+    // Uh oh, no solution
+  } else {
+    console.log('no solution');
+    noLoop();
+    return;
+  }
 
     //show openSet
     for (var i = 0; i < openSet.length; i++) {
@@ -189,6 +197,7 @@ function draw() {
         }
     }
 
+    
     end.show(255, 0, 255);
 
 }

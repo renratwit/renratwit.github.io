@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="calculator.js"></script>
+</head>
+<body>
+    <div class="main">
+
+        <input class="display" type="text" placeholder="0" value="">
+
+        <div class="buttons">
+            <button class="clear" onclick="c()">C</button>
+            <button class="delete" onclick="del()">del</button>
+            <button class="digit divide" value="/" onclick="insertDivide()">/</button>
+
+            <button class="digit" value="7" onclick="input(7)">7</button>
+            <button class="digit" value="8" onclick="input(8)">8</button>
+            <button class="digit" value="9" onclick="input(9)">9</button>
+            <button class="digit multiply" value="*" onclick="insertMultiply()">*</button>
+
+            <button class="digit" value="4" onclick="input(4)">4</button>
+            <button class="digit" value="5" onclick="input(5)">5</button>
+            <button class="digit" value="6" onclick="input(6)">6</button>
+            <button class="digit minus" value="-" onclick="insertMinus()">-</button>
+
+            <button class="digit" value="1" onclick="input(1)">1</button>
+            <button class="digit" value="2" onclick="input(2)">2</button>
+            <button class="digit" value="3" onclick="input(3)">3</button>
+            <button class="digit add" value="+" onclick="insertAdd()">+</button>
+
+            <button class="digit" value="0" onclick="input(0)">0</button>
+            <button class="digit" value="." onclick="insertDecimal()">.</button>
+            <button class="equals" onclick="equal()">=</button>
+            
+        </div>
+    </div>
+</body>
+
+</html>
