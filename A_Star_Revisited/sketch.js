@@ -1,5 +1,5 @@
-let cols = 20;
-let rows = 20;
+let cols = 30;
+let rows = 30;
 
 let grid = new Array(cols);
 for(var i = 0; i < cols; i++){
@@ -9,7 +9,7 @@ for(var i = 0; i < cols; i++){
 let start;
 let end;
 
-let path; //set of Nodes that create the path
+let path = []; //set of Nodes that create the path
 
 let open = [];
 let closed = [];
@@ -82,9 +82,6 @@ function setup(){
         fill('rgb(0, 0, 0)');
         rect(blocked[i].i * w, blocked[i].j * h, w, h);
     }
-
-    
-
 }
 
 
@@ -110,15 +107,14 @@ function draw(){
 
         //if target node is found: do stuff & break from function
         if (current === end){
-            tracePath();
+            let temp = end;
 
-            //draw the path
-            for (var i = 0; i < path.length; i++){
-                fill('rgb(255, 0, 0)');
-                rect(path[i].i * w, path[i].j * h, w, h);
+            while (temp.parent) {
+                console.log(temp);
+                fill(255, 0, 0);
+                rect(temp.i * w, temp.j * h, w, h);
+                temp = temp.parent;
             }
-            
-            console.log("PATH FOUND");
             noLoop();
         }
 
@@ -154,19 +150,15 @@ function draw(){
     /**
      * draw everything
      */
-
-    
-    
-
      //draw open
      for (var i = 0; i < open.length; i++) {
-        fill('rgb(0, 255, 0)');
-        rect(open[i].i * w, open[i].j * h, width/cols, height/rows);
+        fill('rgba(0, 255, 200, 0.1)');
+        rect(open[i].i * w, open[i].j * h, w, h);
     }
 
      //draw closed
      for (var i = 0; i < closed.length; i++) {
-        fill('rgb(0, 0, 255)');
+        fill('rgba(0, 20, 255, 0.1)');
         rect(closed[i].i * (width/cols), closed[i].j * (height/rows), width/cols, height/rows);
     }
 

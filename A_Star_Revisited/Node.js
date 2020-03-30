@@ -7,7 +7,7 @@ class Node{
         this.f = this.g + this.h;
 
         this.isBlock = false;
-        this.isBlock = random(1) < 0.4 ? true : false;
+        this.isBlock = random(1) < 0.25 ? true : false;
 
         this.neighbors = [];
         this.parent = undefined;
