@@ -1,5 +1,5 @@
-let cols = 30;
-let rows = 30;
+let cols = 50;
+let rows = 50;
 
 let grid = new Array(cols);
 for(var i = 0; i < cols; i++){
@@ -107,15 +107,15 @@ function draw(){
 
         //if target node is found: do stuff & break from function
         if (current === end){
-            let temp = end;
-
+            let temp = current;
             while (temp.parent) {
-                console.log(temp);
                 fill(255, 0, 0);
                 rect(temp.i * w, temp.j * h, w, h);
                 temp = temp.parent;
             }
             noLoop();
+            return;
+            
         }
 
         //for each neighbor of current
@@ -152,15 +152,25 @@ function draw(){
      */
      //draw open
      for (var i = 0; i < open.length; i++) {
-        fill('rgba(0, 255, 200, 0.1)');
+        fill('rgba(0, 255, 200, 0.5)');
         rect(open[i].i * w, open[i].j * h, w, h);
     }
 
      //draw closed
      for (var i = 0; i < closed.length; i++) {
-        fill('rgba(0, 20, 255, 0.1)');
+        fill('rgba(0, 20, 255, 0.5)');
         rect(closed[i].i * (width/cols), closed[i].j * (height/rows), width/cols, height/rows);
     }
+
+    // let temp = current;
+    // while (temp.parent) {
+    //     fill(255, 0, 0);
+    //     rect(temp.i * w, temp.j * h, w, h);
+    //     temp = temp.parent;
+    // }
+
+    fill(255,0, 0);
+    rect(current.i * w, current.j * h, w, h);
 
 
 }//end draw()
