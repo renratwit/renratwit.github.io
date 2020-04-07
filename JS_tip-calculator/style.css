@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    border: black solid;
+    width: 40vw;
+    max-width: 40vw;
+    height: 60vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+form {
+    margin: auto;
+    border: red solid;
+    display: flex;
+    height: 30vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+form .split_container {
+    display: flex;
+    justify-content: center;
+}
+
+#total {
+    text-align: right;
+}
+
+.partyCount {
+    display: flex;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}

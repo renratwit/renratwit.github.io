@@ -9,7 +9,7 @@ function setup(){
     createCanvas(700, 700);
     //background(0);
     //randomly populate verticies
-    for(var i = 0; i < 10; i++){
+    for(var i = 0; i < 20; i++){
         vertices.push(createVector(random(0, width - 50), random(0, height - 50)));
     }
 }

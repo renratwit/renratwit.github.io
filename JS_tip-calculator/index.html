@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js example</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="container">
+      <h1>Tip Calculator</h1>
+
+      <div id="display">$0.00</div>
+
+      <form>
+         <div>Bill Total: $<input type="text" id="total"/></div>
+         <div>Service:<select>
+              <option selected value="0.00">---</option>
+              <option value="0.10">Okay - 10%</option>
+              <option value="0.15">Fine - 15%</option>
+              <option value="0.20">Excellent - 20%</option>
+              <option value="0.25">Fantastic - 25%</option>
+              </select>
+            </div>
+              <div class="split_container"><p>Split check:</p><button id="minus">&#45;</button> <p id="count">1</p> <button id="plus">&#43;</button></div>
+    </form>
+
+    <button id="calculateTip">TIP!</button>
+
+    </div>
+  </body>
+</html>

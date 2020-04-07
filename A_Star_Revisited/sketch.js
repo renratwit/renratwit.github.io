@@ -82,6 +82,8 @@ function setup(){
         fill('rgb(0, 0, 0)');
         rect(blocked[i].i * w, blocked[i].j * h, w, h);
     }
+
+    frameRate(30);
 }
 
 
@@ -152,13 +154,13 @@ function draw(){
      */
      //draw open
      for (var i = 0; i < open.length; i++) {
-        fill('rgba(0, 255, 200, 0.5)');
+        fill('rgba(0, 255, 200, 1)');
         rect(open[i].i * w, open[i].j * h, w, h);
     }
 
      //draw closed
      for (var i = 0; i < closed.length; i++) {
-        fill('rgba(0, 20, 255, 0.5)');
+        fill('rgba(0, 20, 255, 1)');
         rect(closed[i].i * (width/cols), closed[i].j * (height/rows), width/cols, height/rows);
     }
 
