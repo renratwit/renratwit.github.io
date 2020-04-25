@@ -16,17 +16,26 @@ body {
 
 form {
     margin: auto;
-    border: red solid;
     display: flex;
     height: 30vh;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: flex-start;
     text-align: center;
 }
 
-form .split_container {
+.split_container {
     display: flex;
     justify-content: center;
+    padding-bottom: 5vh;
+}
+
+.split_container button {
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+
+    
 }
 
 #total {

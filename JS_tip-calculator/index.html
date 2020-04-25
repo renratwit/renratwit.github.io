@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>p5.js example</title>
     <link rel="stylesheet" href="style.css">
+    
   </head>
   <body>
     <div id="container">
@@ -12,9 +13,9 @@
 
       <div id="display">$0.00</div>
 
-      <form>
-         <div>Bill Total: $<input type="text" id="total"/></div>
-         <div>Service:<select>
+         <div><p>Bill Total: $<input type="text" id="total"/></p></div>
+         <div>Service:
+              <select id="service">
               <option selected value="0.00">---</option>
               <option value="0.10">Okay - 10%</option>
               <option value="0.15">Fine - 15%</option>
@@ -22,11 +23,18 @@
               <option value="0.25">Fantastic - 25%</option>
               </select>
             </div>
-              <div class="split_container"><p>Split check:</p><button id="minus">&#45;</button> <p id="count">1</p> <button id="plus">&#43;</button></div>
-    </form>
+      
+              <div class="split_container">
+                <p>Split check: &nbsp;</p> 
+                <button id="minus">-</button> 
+                  <p id="count">1</p> 
+                  <button onclick="increaseSplit()" id="plus">+</button>
+              </div>
+    
 
     <button id="calculateTip">TIP!</button>
 
     </div>
   </body>
+  <script src="tip_calculator.js"></script>
 </html>
