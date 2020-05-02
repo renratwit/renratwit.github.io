@@ -34,8 +34,10 @@ form {
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
+}
 
-    
+#display {
+    font-size: x-large;
 }
 
 #total {
@@ -49,4 +51,19 @@ form {
 #container {
     display: flex;
     flex-direction: column;
+}
+
+#minus, #plus {
+    height: 5vh;
+    margin-top: 1.2vh;
+    border-radius: 8px;
+    border: none;
+}
+
+#minus:hover, #plus:hover {
+    background-color: gray;
+}
+
+#minus:focus, #plus:focus {
+    outline: none;
 }
