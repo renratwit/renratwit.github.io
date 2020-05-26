@@ -9,6 +9,7 @@ function draw() {
     branch(100);
 }
 
+//some recursions stuff
 function branch(length) {
     line(0, 0, 0, -length);
     translate(0, -length);
