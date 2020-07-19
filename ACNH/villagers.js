@@ -1,11 +1,11 @@
-const apiurl = 'http://acnhapi.com/v1/villagers/';
+const apiurl = 'https://acnhapi.com/v1/villagers/';
 
 var villagersList = [];
 var selectedVillagerList = [];
 var personality = ["Uchi", "Jock", "Normal", "Peppy", "Smug", "Snooty", "Lazy", "Cranky"];
 
 for(var i = 1; i <= 391; i++) {
-var api = "http://acnhapi.com/v1/villagers/".concat(i);
+var api = "https://acnhapi.com/v1/villagers/".concat(i);
 
     fetch(api)
     .then(res => res.json())
