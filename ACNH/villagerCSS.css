@@ -1,0 +1,84 @@
+body{
+    display: flex;
+    background-color: aqua;
+}
+
+#main {
+    background-color: #8CD867;
+    justify-content: space-around;
+    justify-items: center;
+    width: 65%;
+    border-radius: 10px;
+}
+
+
+
+#container button {
+    width: 5em;
+}
+.villager {
+    display: inline-block;
+    flex-direction: column;
+    width: 11em;
+    text-align: center;
+}
+
+.villager > #name {
+    margin-top: 0px;
+}
+
+.villager > img {
+    border-radius: 20%;
+    width: 10em;
+    margin: 10px;
+}
+
+.villager > img:hover {
+    border-radius: 50%;
+}
+
+#info {
+    align-content: center;
+    justify-content: center;
+    position: fixed;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    
+}
+
+#buttons {
+    top: 40px;
+    background-color: red;
+    justify-content: space-around;
+    justify-items: center;
+    height: 25%;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+}
+
+button {
+    font-family: 'Bree Serif', 'serif';
+    width: 30%;
+    
+    margin: .5em;
+}
+#profile {
+    border-radius: 10%;
+    font-family: 'Bree Serif', serif;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #249452;
+    height: 50%;
+    text-align: left;
+    text-indent: 2em;
+}
+
+.name {
+    font-family: 'Bree Serif', serif;
+}
