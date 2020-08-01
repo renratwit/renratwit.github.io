@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+    height: 4em;
+    /*background-color: #249452;*/
+    background-color: red;  
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav a {
+    color: white;
+    font-family: 'Bree Serif', serif;
+    font-size: 2em;
+    text-decoration: none;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+nav a:hover {
+    color: aqua;
+}
+
+#container {
+    height: 100vh;
+    background: blueviolet;
+    width: 100%;
+    
+}
+
+#cover {
+    right: 50%;
+    left: 50%;
+    height: 20em;
+    margin-top: 0.5em;
+}
+
+#title {
+    font-family: 'Bree Serif';
+    font-size: large;
+}
+#info {
+    margin-top:4em;
+    height: 45%;
+    background-color: blue;
+    width: 50%;
+    margin: auto;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#songs {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    background: black;
+    margin-top: 1em;
+    height: 30%;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.song {
+    margin: 10px;
+    border: white 10px;
+}
+
+.song img:hover {
+    width: 12em;
+}
+
+.song img {
+    width: 10em;
+}
+
+#player {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 3em;
+}
+audio {
+    margin: 0 auto;
+    width: 100%;
+
+}

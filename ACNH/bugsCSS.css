@@ -1,11 +1,7 @@
-body { 
-    background-color: aqua;
-    padding-top: 5em;
-    font-family: "Bree Serif", serif;
-}
-#page{
+body{
     display: flex;
     background-color: aqua;
+    padding-top: 5em;
 }
 
 #main {
@@ -14,23 +10,7 @@ body {
     justify-items: center;
     width: 68%;
     border-radius: 10px;
-    height: 89vh;
-    overflow: hidden;
-    overflow-y: scroll;
 }
-
-#info {
-    align-content: center;
-    justify-content: center;
-    position: fixed;
-    right: 10px;
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    font-size: 1.8vh;
-    
-}
-
 
 nav {
     width: 100%;
@@ -47,6 +27,7 @@ nav img{
 
 nav a {
     color: white;
+    font-family: 'Bree Serif', serif;
     font-size: 2em;
     text-decoration: none;
     padding-left: 1em;
@@ -57,31 +38,61 @@ nav a:hover {
     color: aqua;
 }
 
+
+
 #container button {
     width: 5em;
 }
-.villager {
+.bug {
     display: inline-block;
     flex-direction: column;
     width: 11em;
     text-align: center;
 }
 
-.villager > #name {
+.bug #name {
     margin-top: 0px;
 }
 
-.villager > img {
-    border-radius: 20%;
+.bug img {
     width: 10em;
     margin: 10px;
 }
 
-.villager > img:hover {
-    border-radius: 50%;
+.bug img:hover {
+    opacity: 75%;
 }
 
+.fish {
+    display: inline-block;
+    flex-direction: column;
+    width: 11em;
+    text-align: center;
+}
 
+.fish #name {
+    margin-top: 0px;
+}
+
+.fish img {
+    width: 10em;
+    margin: 10px;
+}
+
+.fish img:hover {
+    opacity: 75%;
+}
+
+#info {
+    align-content: center;
+    justify-content: center;
+    position: fixed;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    
+}
 
 #buttons {
     top: 40px;
@@ -113,9 +124,24 @@ button {
     text-align: left;
     text-indent: 2em;
 }
-
-#profile button {
-    
+#dailyFish {
+    background-color: #8CD867;
+    justify-content: space-around;
+    justify-items: center;
+    width: 68%;
+    border-radius: 10px;
+    margin: 2em;
+}
+#dailyBugs {
+    background-color: #8CD867;
+    justify-content: space-around;
+    justify-items: center;
+    width: 68%;
+    border-radius: 10px;
+    margin: 2em;
+}
+h2 {
+    font-family: 'Bree Serif', serif;
 }
 
 .name {

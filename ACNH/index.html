@@ -3,9 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src='main.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <title>Welcome</title>
 </head>
+<nav> 
+    <img src="logo.png" width="75">
+    <a href="index.html">Home</a>  
+    <a href="villagers.html">Villagers</a>
+    <a href="fish.html">Fish</a>
+    <a href="bugs.html">Bugs</a>
+    <a href="sea.html">Sea Creatures</a>
+    <a href="music.html">Music</a>
+    <a href="myInfo.html">My Island</a>
+</nav>
 <body>
-    <nav>Home Critters Villagers Museum Items</nav>
+    <div id = "critters">
+        <div id="dailyFish">
+            <h2>Fish</h2>
+            <div id="rod-net-snorkel">
+                <img src="rod.png" width="50px">
+            </div>
+            
+        </div>
+
+        <div id="dailyBugs">
+            <h2>Bugs</h2>
+            <div id="rod-net-snorkel">
+                <img src="net.png" width="50px">
+            </div>
+        </div> 
+        
+        <div id="dailySea">
+            <h2>Sea Creatures</h2>
+            <div id="rod-net-snorkel">
+                <img src="snorkel.png" width="50px">
+            </div>
+        </div>
+    </div>
+
+    <div id = "stars-todo">
+        <div id="stars">
+            <h2>Celestial Insights</h2>
+            <h3 id="sign"></h3>
+            <p>Don't forget to look for stars on clear nights from 7 pm to 4 am!</p>
+            <img src="celeste.png" width="100">
+        </div>
+
+        <div id="tasks">
+            <h2>To Do</h2>
+            <table>
+                <tr>
+                    <td><p>Shake trees for wasps</p></td>
+                    <td>
+                        <img src = "https://acnhapi.com/v1/icons/bugs/25" height="50px" width="50px">
+                        <input type="checkbox" name="Wasp">
+                        <img src = "https://acnhapi.com/v1/icons/bugs/25" height="50px" width="50px">
+                        <input type="checkbox" name="Wasp">
+                        <img src = "https://acnhapi.com/v1/icons/bugs/25" height="50px" width="50px">
+                        <input type="checkbox" name="Wasp">
+                        <img src = "https://acnhapi.com/v1/icons/bugs/25" height="50px" width="50px">
+                        <input type="checkbox" name="Wasp">
+                        <img src = "https://acnhapi.com/v1/icons/bugs/25" height="50px" width="50px">
+                        <input type="checkbox" name="Wasp">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>Shake trees for furniture</p></td>
+                    <td>
+                        <img src = "leaf.png" width="40px">
+                        <input type="checkbox" name="Furniture">
+                        <img src = "leaf.png" width="40px">
+                        <input type="checkbox" name="Furniture">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>Hit rocks</p></td>
+                    <td>
+                        <img src = "rock.png" width="40px">
+                        <input type="checkbox" name="Rock">
+                        <img src = "rock.png" width="40px">
+                        <input type="checkbox" name="Rock">
+                        <img src = "rock.png" width="40px">
+                        <input type="checkbox" name="Rock">
+                        <img src = "rock.png" width="40px">
+                        <input type="checkbox" name="Rock">
+                        <img src = "rock.png" width="40px">
+                        <input type="checkbox" name="Rock">
+                        <img src = "rock.png" width="40px">
+                        <input type="checkbox" name="Rock">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>Dig up fossils</p></td>
+                    <td>
+                        <img src = "fossil.png" width="50px">
+                        <input type="checkbox" name="Fossil">
+                        <img src = "fossil.png" width="50px">
+                        <input type="checkbox" name="Fossil">
+                        <img src = "fossil.png" width="50px">
+                        <input type="checkbox" name="Fossil">
+                        <img src = "fossil.png" width="50px">
+                        <input type="checkbox" name="Fossil">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>Find the recipe bottle on the beach</p></td>
+                    <td>
+                        <img src = "recipe.png" width="50px">
+                        <input type="checkbox" name="DIY Recipe Bottle">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>Plant the bell tree</p></td>
+                    <td>
+                        <img src = "bells.png" width="50px">
+                        <input type="checkbox" name="Bell Tree">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="scallop">
+            <h2>Pascal's Words of Wisdom</h2>
+            <img src="pascal.png" width="100">
+        </div>
+        
+    </div>
 </body>
+
+<footer>
+    <p>&copy; Megan Sicard, Raymond Ren, and Alyza Diaz Rodriguez </br>
+        The Animal Crossing: New Horizons Guide is not affliated with Nintendo</p>
+</footer>
+
 </html>
