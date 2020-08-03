@@ -1,7 +1,9 @@
 body{
-    display: flex;
+    
     background-color: aqua;
     padding-top: 5em;
+    font-family: 'Bree Serif', 'Serif';
+    
 }
 
 nav {
@@ -44,3 +46,15 @@ nav a:hover {
     flex-direction: column;
     text-align: center;
 }
+
+.critter {
+    padding-top: 3em;
+    display: flex;
+    text-align: center;
+}
+
+.critter img {
+    width: 3em;
+    padding: 0.5em;
+}
+

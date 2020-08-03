@@ -4,7 +4,7 @@ var villagersList = [];
 var selectedVillagerList = [];  //list for certain villagers based on search requirements
 var personality = ["Uchi", "Jock", "Normal", "Peppy", "Smug", "Snooty", "Lazy", "Cranky"];
 
-var myVillagers = []; //list for villagers in local cache
+var myVillagers; //list for villagers in local cache
 
 //insert all villagers upon loading
 for(var i = 1; i <= 391; i++) {
@@ -14,10 +14,6 @@ for(var i = 1; i <= 391; i++) {
 
 
 window.onload = function() {
-    if(localStorage.getItem("myVillagers") === null) {
-        localStorage.setItem("myVillagers", myVillagers); 
-        console.log("here")
-    }
 
     //create all buttons for each personality type
     for(var i = 0; i < personality.length; i++) {
@@ -117,11 +113,15 @@ function insertVillagers(api) {
                 document.getElementById('gender').innerHTML = "Gender: " + data.gender;
 
                 document.getElementById("add").onclick = function() {
+                    myVillagers = (localStorage.hasOwnProperty("myVillagers")) ? JSON.parse(localStorage.myVillagers) : [];
+                    localStorage.setItem("myVillagers", myVillagers);
                     if(!localStorage.myVillagers.includes(data.id) && myVillagers.length < 10) {
                         myVillagers.push(data.id);
                         console.log(data.id);
                         localStorage.setItem("myVillagers", JSON.stringify(myVillagers));
-                    } else { console.log("already in or limit exceeded") }
+                    } else { 
+                        localStorage.setItem("myVillagers", "[" + localStorage.myVillagers + "]");
+                        console.log("already in or limit exceeded") }
                 }
             };
 

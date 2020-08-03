@@ -1,13 +1,14 @@
 body {
     display: flex;
+    font-family: 'Bree Serif', serif;
     margin: 0;
+    background: #353238;
 }
 
 nav {
     width: 100%;
-    height: 4em;
-    /*background-color: #249452;*/
-    background-color: red;  
+    height: 5em;
+    background-color: #028090;  
     position: fixed;
     top: 0;
     left: 0;
@@ -15,11 +16,14 @@ nav {
 
 nav a {
     color: white;
-    font-family: 'Bree Serif', serif;
     font-size: 2em;
     text-decoration: none;
     padding-left: 1em;
     padding-right: 1em;
+}
+
+nav img{
+    margin: 3px;
 }
 
 nav a:hover {
@@ -28,9 +32,36 @@ nav a:hover {
 
 #container {
     height: 100vh;
-    background: blueviolet;
+    background: #353238;
     width: 100%;
-    
+    margin-top: 1em;
+}
+
+#kkslider {
+    display: flex;
+}
+
+#tips {
+    background-color: #92140C;
+    border-radius: 10px;
+    height: "500px";
+    width: 15%;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+#tips p{
+    margin: 1em;
+    text-align: center;
+}
+
+#tips img{
+    display: block;
+    margin-bottom: 2.5em;
 }
 
 #cover {
@@ -41,32 +72,38 @@ nav a:hover {
 }
 
 #title {
-    font-family: 'Bree Serif';
     font-size: large;
 }
+
 #info {
-    margin-top:4em;
-    height: 45%;
-    background-color: blue;
+    height: 55%;
+    background-color: #BE5A38;
     width: 50%;
-    margin: auto;
     margin-top: 5em;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 10px;
+    margin-left: 3em;
+    margin-right: 3em;
 }
 
+#info img{
+    width: 250px;
+    height: 250px;
+}
 
 #songs {
     display: flex;
     flex-direction: row;
     width: 80%;
     margin: 0 auto;
-    background: black;
+    background: #C1B4AE;
     margin-top: 1em;
     height: 30%;
     overflow: hidden;
     overflow-x: scroll;
+    border-radius: 10px;
 }
 
 .song {
@@ -79,16 +116,31 @@ nav a:hover {
 }
 
 .song img {
+    margin-top: 10px;
     width: 10em;
 }
 
-#player {
+#music {
     width: 50%;
     margin: 0 auto;
-    margin-top: 3em;
+    margin-bottom: 10px;
 }
+
 audio {
     margin: 0 auto;
     width: 100%;
 
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

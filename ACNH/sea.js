@@ -2,6 +2,8 @@ const apiurl = 'https://acnhapi.com/v1/sea/';
 
 var seaList = [];
 
+var mySea;
+
 for(var i = 1;i<=40;i++){
     var api = apiurl.concat(i);
     insertSea(api);
@@ -25,7 +27,7 @@ window.onload = function() {
                 insertSea(apiurl.concat(seaList[i].id));
             }
         }
-    })();
+    });
 }
 
 function insertSea(api){
@@ -74,6 +76,19 @@ function insertSea(api){
                 
                 document.getElementById("shadow").innerHTML = "Shadow Size: "+ data.shadow;
                 document.getElementById("price").innerHTML = "Price: "+ data.price;
+
+                document.getElementById("add").onclick = function() {
+                    mySea = (localStorage.hasOwnProperty("mySea")) ? JSON.parse(localStorage.mySea) : [];
+                    localStorage.setItem("mySea", mySea);
+                    if(!localStorage.mySea.includes(data.id) && mySea.length <= 80) {
+                        mySea.push(data.id);
+                        console.log(data.id);
+                        localStorage.setItem("mySea", JSON.stringify(mySea));
+                    } else { 
+                        localStorage.setItem("mySea", "[" + localStorage.mySea + "]");
+                        console.log("already in or limit exceeded") 
+                    }
+                }
             };
         });
 }

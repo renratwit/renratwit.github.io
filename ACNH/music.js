@@ -24,7 +24,5 @@ for(var i = 1; i <= 95; i++) {
                 document.getElementById('music').src = data.music_uri;
                 document.getElementById('title').innerHTML = data.name["name-USen"];
             });
-
-            
         })
 }

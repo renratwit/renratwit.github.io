@@ -1,0 +1,149 @@
+body{
+    display: flex;
+    background-color: aqua;
+    padding-top: 5em;
+}
+
+#main {
+    background-color: #8CD867;
+    justify-content: space-around;
+    justify-items: center;
+    width: 68%;
+    border-radius: 10px;
+}
+
+nav {
+    width: 100%;
+    height: 5em;
+    background-color: #028090;  
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav img{
+    margin: 3px;
+}
+
+nav a {
+    color: white;
+    font-family: 'Bree Serif', serif;
+    font-size: 2em;
+    text-decoration: none;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+nav a:hover {
+    color: aqua;
+}
+
+
+
+#container button {
+    width: 5em;
+}
+.bug {
+    display: inline-block;
+    flex-direction: column;
+    width: 11em;
+    text-align: center;
+}
+
+.bug #name {
+    margin-top: 0px;
+}
+
+.bug img {
+    width: 10em;
+    margin: 10px;
+}
+
+.bug img:hover {
+    opacity: 75%;
+}
+
+.fish {
+    display: inline-block;
+    flex-direction: column;
+    width: 11em;
+    text-align: center;
+}
+
+.fish #name {
+    margin-top: 0px;
+}
+
+.fish img {
+    width: 10em;
+    margin: 10px;
+}
+
+.fish img:hover {
+    opacity: 75%;
+}
+
+#info {
+    align-content: center;
+    justify-content: center;
+    position: fixed;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    
+}
+
+#buttons {
+    top: 40px;
+    background-color: red;
+    justify-content: space-around;
+    justify-items: center;
+    height: 25%;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+}
+
+button {
+    font-family: 'Bree Serif', 'serif';
+    width: 30%;
+    
+    margin: .5em;
+}
+#profile {
+    border-radius: 10%;
+    font-family: 'Bree Serif', serif;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #249452;
+    height: 50%;
+    text-align: left;
+    text-indent: 2em;
+}
+#dailyFish {
+    background-color: #8CD867;
+    justify-content: space-around;
+    justify-items: center;
+    width: 68%;
+    border-radius: 10px;
+    margin: 2em;
+}
+#dailyBugs {
+    background-color: #8CD867;
+    justify-content: space-around;
+    justify-items: center;
+    width: 68%;
+    border-radius: 10px;
+    margin: 2em;
+}
+h2 {
+    font-family: 'Bree Serif', serif;
+}
+
+.name {
+    font-family: 'Bree Serif', serif;
+}
