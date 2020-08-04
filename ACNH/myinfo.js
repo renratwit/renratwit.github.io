@@ -83,7 +83,7 @@ function insertBugs(api){
             // bug.appendChild(name);
 
             //append the villager to the main area of the page
-            main.appendChild(bug);
+            document.getElementById("bugs-box").appendChild(bug);
     })
 }
 
@@ -108,7 +108,7 @@ function insertFish(api){
             //fish.appendChild(name);
 
             //append the villager to the main area of the page
-            main.appendChild(fish);
+            document.getElementById("fish-box").appendChild(fish);
     })
 }
 
@@ -134,6 +134,6 @@ function insertSea(api) {
             //sea.appendChild(name);
 
             //append the villager to the main area of the page
-            main.appendChild(sea);
+            document.getElementById("sea-box").appendChild(sea);
     })
 }

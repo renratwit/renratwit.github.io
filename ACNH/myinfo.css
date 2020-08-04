@@ -1,9 +1,7 @@
 body{
-    
-    background-color: aqua;
+    background-color: #549234;
     padding-top: 5em;
     font-family: 'Bree Serif', 'Serif';
-    
 }
 
 nav {
@@ -30,15 +28,20 @@ nav a {
 nav a:hover {
     color: aqua;
 }
+
 #villagers {
     display: flex;
     flex-direction: row;
-    background-color: chartreuse;
+    background-color: #A6979C;
+    border-radius: 10px;
+    width: 70%;
+    overflow: scroll;
+    overflow-y: hidden;
 }
 
 #villagers img {
-    width: 10em;
-    margin: .5vh;
+    width: 8em;
+    margin: 1em;
 }
 
 .villager {
@@ -58,3 +61,38 @@ nav a:hover {
     padding: 0.5em;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#holder{
+    display: flex;
+    flex-direction: column;
+}
+
+#bugs-box{
+    background-color: #8CD867;
+    border-radius: 10px;
+    display: flex;
+    width: 50%;
+    overflow: scroll;
+    overflow-y: hidden;
+}
+
+#fish-box, #sea-box{
+    background-color: #53a9b2;
+    border-radius: 10px;
+    display: flex;
+    width: 50%;
+    overflow: scroll;
+    overflow-y: hidden;
+}

@@ -10,6 +10,9 @@ body{
     justify-items: center;
     width: 68%;
     border-radius: 10px;
+    height: 89vh;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 nav {
@@ -19,6 +22,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
 }
 
 nav img{
@@ -146,4 +150,17 @@ h2 {
 
 .name {
     font-family: 'Bree Serif', serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

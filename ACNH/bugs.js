@@ -11,7 +11,25 @@ window.onload = function() {
         var api = "https://acnhapi.com/v1/bugs/".concat(i);    
         insertBugs(api);
     }
+    
+    var searchBtn = document.getElementById("search_button");
+    var search = document.getElementById("search");
 
+    searchBtn.addEventListener("click", function(){
+        var name = search.value.toLowerCase();
+        var goTo = document.getElementById(name);
+        goTo.scrollIntoView({ block: 'center' });
+        
+        highlight(goTo);
+        
+        function highlight(goTo){
+           var orig = goTo.style.backgroundColor;
+           goTo.style.backgroundColor = "yellow";
+           setTimeout(function(){
+                goTo.style.backgroundColor = orig;
+           }, 2500);
+        }
+    });
 }
 
 function insertBugs(api) {
@@ -24,6 +42,7 @@ function insertBugs(api) {
             var main = document.getElementById('main');
             var bug = document.createElement('div');
             bug.classList.add("bug");
+            bug.setAttribute("id", data.name["name-USen"]);
             var img = document.createElement("img");
             var name = document.createElement('div');
             name.classList.add("name");

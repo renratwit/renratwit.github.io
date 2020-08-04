@@ -36,6 +36,9 @@ nav a:hover {
     width: 68%;
     border-radius: 10px;
     margin-top: 5em;
+    height: 89vh;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 #container button {
@@ -109,3 +112,15 @@ button {
     text-transform: capitalize;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
